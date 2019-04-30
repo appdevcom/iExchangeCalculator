@@ -41,7 +41,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         let coin = coin_sc.titleForSegment(at: coin_sc.selectedSegmentIndex)!
         
-        let url = "http://free.currencyconverterapi.com/api/v3/convert?q="+coin+"_EUR&compact=ultra";
+        //let url = "http://free.currencyconverterapi.com/api/v3/convert?q="+coin+"_EUR&compact=ultra";
+        let url = "https://free.currconv.com/api/v7/convert?q="+coin+"_EUR&compact=ultra&apiKey=221a7323699737154f93";
         
         Alamofire.request(url).responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
